@@ -1,0 +1,171 @@
+<!-- The content below is only a placeholder and can be replaced.
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+</div>
+<h2>Here are some links to help you start: </h2>
+<ul>
+  <li>
+    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
+  </li>
+  <li>
+    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
+  </li>
+  <li>
+    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
+  </li>
+</ul>
+
+<router-outlet></router-outlet> -->
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script> -->
+<link href='https://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+<html>
+<article class="bg">
+    <nav class="navbar navbar-light bg-light navbar" >
+      <label>Weather App</label>
+      <!-- <form class="form-inline" #cityForm="ngForm" novalidate ngSubmit="onSubmit()">  
+        <input class="form-control mr-sm-2" type="search" aria-label="Search" placeholder="Enter city" name = cityName ngModel>
+        <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Search</button>
+      </form> -->
+      <form class="form-inline" #cityForm="ngForm" (ngSubmit)="onSubmit(cityForm.value)">
+        <input class="form-control mr-sm-2" type="search" placeholder="Enter city" aria-label="Search" name="cityName" ngModel>
+        <button class="btn btn-outline-warning my-2 my-sm-0" type="submit" id="button" >Search</button>
+      </form>
+    </nav>
+
+    <div class="nav-card-space"></div>
+     <article>
+       <header class="header">Weather Application.</header>
+    </article>
+</article> 
+
+<article class="bg-2">
+  <header class="header-2">Your location based weather info.</header>
+  <div class="card col-md-7">
+    <span class="city">{{Place}}</span>
+      <br>
+    <div class="sun">
+      <img src="../assets/weather-icon/svg/cloud-1.svg">
+    </div>
+    <label class="temp">{{Temp}}&#176;</label>
+    <span>
+      <span class="variations">
+        <label>{{Desc}}</label>
+        <label><span class="speed">{{Speed}}<span class="mph">kmph</span></span></label>
+      </span>
+    </span>
+    <br>
+    <div class="forecast clear">
+      <div class="day">HIGH 
+        <br> <span class="highTemp">{{Maxtemp}}&#176;</span> 
+      </div>
+      <div class="day ">LOW
+        <br> <span class="lowTemp">{{Mintemp}}&#176;</span>
+      </div>
+      <div class="day">HUMIDTY 
+        <br> <span class="humidity">{{Humidity}}%</span>
+      </div>
+      <div class="day fri">PRESSURE (mb)
+        <br> <span class="pressure">{{Pressure}}</span> 
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="bg-1">
+  <header class="header-2">Popular City Indexes.</header>
+  <div class="card-deck">
+      <div class="card col-md-4">
+        <span class="city">Pismo Beach</span>
+          <br>
+        <div class="sun">
+          <img src="../assets/weather-icon/svg/cloud-1.svg">
+        </div>
+        <label class="temp">76&#176;</label>
+        <span>
+          <span class="variations">
+            <label>CLEAR</label>
+            <label><span class="speed">9<span class="mph">mph</span></span></label>
+          </span>
+        </span>
+        <br>
+        <div class="forecast clear">
+          <div class="day">HIGH 
+            <br> <span class="highTemp">79&#176;</span> 
+          </div>
+          <div class="day ">LOW
+            <br> <span class="lowTemp">79&#176;</span>
+          </div>
+          <div class="day">HUMIDTY 
+            <br> <span class="humidity">79%</span>
+          </div>
+          <div class="day fri">PRESSURE (mb)
+            <br> <span class="pressure">1013</span> 
+          </div>
+        </div>
+      </div>
+
+      <div class="card col-md-4">
+          <span class="city">Pismo Beach</span>
+            <br>
+          <div class="sun">
+            <img src="../assets/weather-icon/svg/cloud-1.svg">
+          </div>
+          <label class="temp">76&#176;</label>
+          <span>
+            <span class="variations">
+              <label>CLEAR</label>
+              <label><span class="speed">9<span class="mph">mph</span></span></label>
+            </span>
+          </span>
+          <br>
+          <div class="forecast clear">
+            <div class="day tue">HIGH 
+              <br> <span class="highTemp">79&#176;</span> 
+            </div>
+            <div class="day wed">LOW
+              <br> <span class="lowTemp">79&#176;</span>
+            </div>
+            <div class="day thu">HUMIDTY 
+              <br> <span class="humidity">79%</span>
+            </div>
+            <div class="day fri">PRESSURE (mb)
+              <br> <span class="pressure">1013</span> 
+            </div>
+          </div>
+        </div>
+
+        <div class="card col-md-4">
+            <span class="city">Pismo Beach</span>
+              <br>
+            <div class="sun">
+              <img src="../assets/weather-icon/svg/cloud-1.svg">
+            </div>
+            <label class="temp">76&#176;</label>
+            <span>
+              <span class="variations">
+                <label>CLEAR</label>
+                <label><span class="speed">9<span class="mph">mph</span></span></label>
+              </span>
+            </span>
+            <br>
+            <div class="forecast clear">
+              <div class="day tue">HIGH 
+                <br> <span class="highTemp">79&#176;</span> 
+              </div>
+              <div class="day wed">LOW
+                <br> <span class="lowTemp">79&#176;</span>
+              </div>
+              <div class="day thu">HUMIDTY 
+                <br> <span class="humidity">79%</span>
+              </div>
+              <div class="day fri">PRESSURE (mb)
+                <br> <span class="pressure">1013</span> 
+              </div>
+            </div>
+          </div>
+  </div>  
+</article>
+</html>

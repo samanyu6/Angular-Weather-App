@@ -1,0 +1,175 @@
+<div>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+  
+  <article class="bg">
+      <nav class="navbar navbar-light bg-light navbar" >
+        <label>Weather App</label>
+        <!-- <form class="form-inline" #cityForm="ngForm" novalidate ngSubmit="onSubmit()">  
+          <input class="form-control mr-sm-2" type="search" aria-label="Search" placeholder="Enter city" name = cityName ngModel>
+          <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Search</button>
+        </form> -->
+        <!-- <form class="form-inline" #cityForm="ngForm" (ngSubmit)="onSubmit(cityForm.value)">
+          <input class="form-control mr-sm-2" type="search" placeholder="Enter city" aria-label="Search" name="cityName" ngModel>
+          <button class="btn btn-outline-warning my-2 my-sm-0" type="submit" id="button" routerLink = "city/{{cityName}}">Search</button>
+        </form> -->
+      </nav>
+  
+      <div class="card">
+        <span class="city">Pismo Beach</span>
+          <br>
+        <div class="sun">
+          <img src="../assets/weather-icon/svg/cloud-1.svg">
+        </div>
+        <label class="temp">76&#176;</label>
+        <span>
+          <span class="variations">
+            <label>CLEAR</label>
+            <label><span class="speed">9<span class="mph">mph</span></span></label>
+          </span>
+        </span>
+        <br>
+        <div class="forecast clear">
+          <div class="day">HIGH 
+            <br> <span class="highTemp">79&#176;</span> 
+          </div>
+          <div class="day ">LOW
+            <br> <span class="lowTemp">79&#176;</span>
+          </div>
+          <div class="day">HUMIDTY 
+            <br> <span class="humidity">79%</span>
+          </div>
+          <div class="day fri">PRESSURE (mb)
+            <br> <span class="pressure">1013</span> 
+          </div>
+        </div>
+      </div>
+  </article> 
+  
+  <!-- <article class="bg-2">
+    <header class="header-2">Your location based weather info.</header>
+    <div class="card">
+      <span class="city">Pismo Beach</span>
+        <br>
+      <div class="sun">
+        <img src="../assets/weather-icon/svg/cloud-1.svg">
+      </div>
+      <label class="temp">76&#176;</label>
+      <span>
+        <span class="variations">
+          <label>CLEAR</label>
+          <label><span class="speed">9<span class="mph">mph</span></span></label>
+        </span>
+      </span>
+      <br>
+      <div class="forecast clear">
+        <div class="day">HIGH 
+          <br> <span class="highTemp">79&#176;</span> 
+        </div>
+        <div class="day ">LOW
+          <br> <span class="lowTemp">79&#176;</span>
+        </div>
+        <div class="day">HUMIDTY 
+          <br> <span class="humidity">79%</span>
+        </div>
+        <div class="day fri">PRESSURE (mb)
+          <br> <span class="pressure">1013</span> 
+        </div>
+      </div>
+    </div>
+  </article>
+  
+  <article class="bg-1">
+    <header class="header-2">Popular City Indexes.</header>
+    <div class="card-deck">
+        <div class="card">
+          <span class="city">Pismo Beach</span>
+            <br>
+          <div class="sun">
+            <img src="../assets/weather-icon/svg/cloud-1.svg">
+          </div>
+          <label class="temp">76&#176;</label>
+          <span>
+            <span class="variations">
+              <label>CLEAR</label>
+              <label><span class="speed">9<span class="mph">mph</span></span></label>
+            </span>
+          </span>
+          <br>
+          <div class="forecast clear">
+            <div class="day">HIGH 
+              <br> <span class="highTemp">79&#176;</span> 
+            </div>
+            <div class="day ">LOW
+              <br> <span class="lowTemp">79&#176;</span>
+            </div>
+            <div class="day">HUMIDTY 
+              <br> <span class="humidity">79%</span>
+            </div>
+            <div class="day fri">PRESSURE (mb)
+              <br> <span class="pressure">1013</span> 
+            </div>
+          </div>
+        </div>
+  
+        <div class="card">
+            <span class="city">Pismo Beach</span>
+              <br>
+            <div class="sun">
+              <img src="../assets/weather-icon/svg/cloud-1.svg">
+            </div>
+            <label class="temp">76&#176;</label>
+            <span>
+              <span class="variations">
+                <label>CLEAR</label>
+                <label><span class="speed">9<span class="mph">mph</span></span></label>
+              </span>
+            </span>
+            <br>
+            <div class="forecast clear">
+              <div class="day tue">HIGH 
+                <br> <span class="highTemp">79&#176;</span> 
+              </div>
+              <div class="day wed">LOW
+                <br> <span class="lowTemp">79&#176;</span>
+              </div>
+              <div class="day thu">HUMIDTY 
+                <br> <span class="humidity">79%</span>
+              </div>
+              <div class="day fri">PRESSURE (mb)
+                <br> <span class="pressure">1013</span> 
+              </div>
+            </div>
+          </div>
+  
+          <div class="card">
+              <span class="city">Pismo Beach</span>
+                <br>
+              <div class="sun">
+                <img src="../assets/weather-icon/svg/cloud-1.svg">
+              </div>
+              <label class="temp">76&#176;</label>
+              <span>
+                <span class="variations">
+                  <label>CLEAR</label>
+                  <label><span class="speed">9<span class="mph">mph</span></span></label>
+                </span>
+              </span>
+              <br>
+              <div class="forecast clear">
+                <div class="day tue">HIGH 
+                  <br> <span class="highTemp">79&#176;</span> 
+                </div>
+                <div class="day wed">LOW
+                  <br> <span class="lowTemp">79&#176;</span>
+                </div>
+                <div class="day thu">HUMIDTY 
+                  <br> <span class="humidity">79%</span>
+                </div>
+                <div class="day fri">PRESSURE (mb)
+                  <br> <span class="pressure">1013</span> 
+                </div>
+              </div>
+            </div>
+    </div>  
+  </article> -->
+  </div>
