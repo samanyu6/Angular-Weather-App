@@ -43,13 +43,13 @@
 
 <article class="bg-2">
   <header class="header-2">Your location based weather info.</header>
-  <div class="card col-md-7">
+  <div class="card-main col-md-7">
     <span class="city">{{Place}}</span>
       <br>
     <div class="sun">
       <img src="../assets/weather-icon/svg/cloud-1.svg">
     </div>
-    <label class="temp">{{Temp}}&#176;</label>
+    <label class="temp-x">{{Temp}}&#176;</label>
     <span>
       <span class="variations">
         <label>{{Desc}}</label>
@@ -77,92 +77,92 @@
 <article class="bg-1">
   <header class="header-2">Popular City Indexes.</header>
   <div class="card-deck">
-      <div class="card col-md-4">
-        <span class="city">Pismo Beach</span>
+      <div class="card col-card">
+        <span class="city">{{lonCity}}</span>
           <br>
         <div class="sun">
           <img src="../assets/weather-icon/svg/cloud-1.svg">
         </div>
-        <label class="temp">76&#176;</label>
+        <label class="temp">{{lonTemp}}&#176;</label>
         <span>
           <span class="variations">
-            <label>CLEAR</label>
-            <label><span class="speed">9<span class="mph">mph</span></span></label>
+            <label>{{lonDesc}}</label>
+            <label><span class="speed">{{lonSpeed}}<span class="mph">mph</span></span></label>
           </span>
         </span>
         <br>
         <div class="forecast clear">
           <div class="day">HIGH 
-            <br> <span class="highTemp">79&#176;</span> 
+            <br> <span class="highTemp">{{lonMaxtemp}}&#176;</span> 
           </div>
           <div class="day ">LOW
-            <br> <span class="lowTemp">79&#176;</span>
+            <br> <span class="lowTemp">{{lonMintemp}}&#176;</span>
           </div>
           <div class="day">HUMIDTY 
-            <br> <span class="humidity">79%</span>
+            <br> <span class="humidity">{{lonHumidity}}%</span>
           </div>
           <div class="day fri">PRESSURE (mb)
-            <br> <span class="pressure">1013</span> 
+            <br> <span class="pressure">{{lonPressure}}</span> 
           </div>
         </div>
       </div>
 
-      <div class="card col-md-4">
-          <span class="city">Pismo Beach</span>
+      <div class="card col-card">
+          <span class="city">{{nyCity}}</span>
             <br>
           <div class="sun">
             <img src="../assets/weather-icon/svg/cloud-1.svg">
           </div>
-          <label class="temp">76&#176;</label>
+          <label class="temp">{{nyTemp}}&#176;</label>
           <span>
             <span class="variations">
-              <label>CLEAR</label>
-              <label><span class="speed">9<span class="mph">mph</span></span></label>
+              <label>{{nyDesc}}</label>
+              <label><span class="speed">{{nySpeed}}</span><span class="mph">mph</span></label>
             </span>
           </span>
           <br>
           <div class="forecast clear">
             <div class="day tue">HIGH 
-              <br> <span class="highTemp">79&#176;</span> 
+              <br> <span class="highTemp">{{nyMaxtemp}}&#176;</span> 
             </div>
             <div class="day wed">LOW
-              <br> <span class="lowTemp">79&#176;</span>
+              <br> <span class="lowTemp">{{nyMintemp}}&#176;</span>
             </div>
             <div class="day thu">HUMIDTY 
-              <br> <span class="humidity">79%</span>
+              <br> <span class="humidity">{{nyHumidity}}%</span>
             </div>
             <div class="day fri">PRESSURE (mb)
-              <br> <span class="pressure">1013</span> 
+              <br> <span class="pressure">{{nyPressure}}</span> 
             </div>
           </div>
         </div>
 
-        <div class="card col-md-4">
-            <span class="city">Pismo Beach</span>
+        <div class="card col-card">
+            <span class="city">{{sgCity}}</span>
               <br>
             <div class="sun">
               <img src="../assets/weather-icon/svg/cloud-1.svg">
             </div>
-            <label class="temp">76&#176;</label>
+            <label class="temp">{{sgTemp}}&#176;</label>
             <span>
               <span class="variations">
                 <label>CLEAR</label>
-                <label><span class="speed">9<span class="mph">mph</span></span></label>
+                <label><span class="speed">{{sgSpeed}}<span class="mph">mph</span></span></label>
               </span>
             </span>
             <br>
             <div class="forecast clear">
               <div class="day tue">HIGH 
-                <br> <span class="highTemp">79&#176;</span> 
+                <br> <span class="highTemp">{{sgMaxtemp}}&#176;</span> 
               </div>
               <div class="day wed">LOW
-                <br> <span class="lowTemp">79&#176;</span>
+                <br> <span class="lowTemp">{{sgMintemp}}&#176;</span>
               </div>
               <div class="day thu">HUMIDTY 
-                <br> <span class="humidity">79%</span>
+                <br> <span class="humidity">{{sgHumidity}}%</span>
               </div>
               <div class="day fri">PRESSURE (mb)
-                <br> <span class="pressure">1013</span> 
+                <br> <span class="pressure">{{sgPressure}}</span> 
               </div>
             </div>
           </div>
