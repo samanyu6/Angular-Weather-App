@@ -26,6 +26,7 @@ export class AppComponent {
   Maxtemp: any;
   Desc: string;
   Speed: any;
+  wi: any;
 
   lonCity:String;
   lonTemp: any;
@@ -35,6 +36,7 @@ export class AppComponent {
   lonMaxtemp: any;
   lonDesc: any;
   lonSpeed: any;
+   lwi:any;
 
   sgCity: any;
   sgTemp: any;
@@ -44,7 +46,8 @@ export class AppComponent {
   sgMaxtemp: any;
   sgDesc: any;
   sgSpeed: any;
-  
+  sgwi:any;
+
   nyCity: any;
   nyTemp: any;
   nyPressure: any;
@@ -53,6 +56,8 @@ export class AppComponent {
   nyMaxtemp: any;
   nyDesc: any;
   nySpeed: any;
+  nywi: any;
+
  //For HttpClient (need to check exact functionality)
  constructor(private httpClient: HttpClient){
  }
@@ -101,11 +106,7 @@ export class AppComponent {
       this.Desc = this.weatherJson.weather[0].main;
       this.Speed = this.weatherJson.wind.speed;
       
-      // switch(this.Desc)
-      // {
-      //   case 
-
-      // }
+      this.wi = this.weatherIcon(this.Desc);
     })
   }
 
@@ -125,8 +126,7 @@ export class AppComponent {
       this.lonMaxtemp = (parseFloat(this.LondonJson.main.temp_max)-273.15).toFixed(1);
       this.lonDesc = this.LondonJson.weather[0].main;
       this.lonSpeed = this.LondonJson.wind.speed;
-
-      console.log(this.lonCity);
+      this.lwi = this.weatherIcon(this.lonDesc);
     })
   }
 
@@ -144,8 +144,7 @@ export class AppComponent {
       this.nyMaxtemp = (parseFloat(this.NYJson.main.temp_max)-273.15).toFixed(1);
       this.nyDesc = this.NYJson.weather[0].main;
       this.nySpeed = this.NYJson.wind.speed;
-
-      console.log(this.nyCity);
+      this.nywi = this.weatherIcon(this.nyDesc);
     })
   }
 
@@ -163,10 +162,78 @@ export class AppComponent {
       this.sgMaxtemp= (parseFloat(this.SingaporeJson.main.temp_max)-273.15).toFixed(1);
       this.sgDesc= this.SingaporeJson.weather[0].main;
       this.sgSpeed= this.SingaporeJson.wind.speed;
-
+      this.sgwi = this.weatherIcon(this.sgDesc);
     })
   }
+
+  weatherIcon(desc:any)
+  {
+    var date = new Date();
+    var hours = date.getHours();
+
+    switch(desc.toLowerCase())
+    {
+      case 'clear sky':
+         if(hours>=6 &&hours<=18)
+             return '../assets/weather-icon/svg/sun.svg'
+          else
+             return '../assets/weather-icon/svg/moon.svg'
+          break;
+      
+      case 'clear':
+         if(hours>=6 &&hours<=18)
+             return '../assets/weather-icon/svg/sun.svg'
+          else
+             return '../assets/weather-icon/svg/moon.svg'
+          break;
+
+      case 'few clouds':
+          if(hours>=6 &&hours<=18)
+             return '../assets/weather-icon/svg/cloudysun.svg'
+          else
+             return '../assets/weather-icon/svg/cloudmoon.svg'
+          break;
+      
+      case 'scattered clouds':
+          if(hours>=6 &&hours<=18)
+                return '../assets/weather-icon/svg/cloudy.svg'
+              else
+                return '../assets/weather-icon/svg/cloudy.svg'
+              break; 
+      
+      case 'broken clouds':
+          if(hours>=6 &&hours<=18)
+                return '../assets/weather-icon/svg/cloudy.svg'
+              else
+                return '../assets/weather-icon/svg/cloudy.svg'
+              break; 
+      
+      case 'shower rain':
+            return '../assets/weather-icon/svg/rain.svg'
+            break; 
+      
+      case 'rain':
+            return '../assets/weather-icon/svg/heavyrain.svg'
+            break; 
+      
+      case 'thunderstorm':
+            return '../assets/weather-icon/svg/storm.svg'
+            break; 
+
+      case 'snow':
+            return '../assets/weather-icon/svg/heavysnow.svg'
+            break; 
+
+      case 'mist':
+             return '../assets/weather-icon/svg/snow.svg'
+             break; 
+
+      default:
+          return '../assets/weather-icon/svg/cloudy.svg'       
+    }
   }
+
+}
 
 
   
