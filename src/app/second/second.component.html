@@ -15,31 +15,31 @@
       </nav>
   
       <div class="card">
-        <span class="city">Pismo Beach</span>
+        <span class="city">{{Place}}</span>
           <br>
         <div class="sun">
-          <img src="../assets/weather-icon/svg/cloud-1.svg">
+          <img src={{wi}}>
         </div>
-        <label class="temp">76&#176;</label>
+        <label class="temp">{{Temp}}&#176;</label>
         <span>
           <span class="variations">
-            <label>CLEAR</label>
-            <label><span class="speed">9<span class="mph">mph</span></span></label>
+            <label>{{Desc}}</label>
+            <label><span class="speed">{{Speed}}<span class="mph">kmph</span></span></label>
           </span>
         </span>
         <br>
         <div class="forecast clear">
           <div class="day">HIGH 
-            <br> <span class="highTemp">79&#176;</span> 
+            <br> <span class="highTemp">{{Maxtemp}}&#176;</span> 
           </div>
           <div class="day ">LOW
-            <br> <span class="lowTemp">79&#176;</span>
+            <br> <span class="lowTemp">{{Mintemp}}&#176;</span>
           </div>
           <div class="day">HUMIDTY 
-            <br> <span class="humidity">79%</span>
+            <br> <span class="humidity">{{Humidity}}%</span>
           </div>
           <div class="day fri">PRESSURE (mb)
-            <br> <span class="pressure">1013</span> 
+            <br> <span class="pressure">{{Pressure}}</span> 
           </div>
         </div>
       </div>

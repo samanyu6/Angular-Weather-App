@@ -1,0 +1,427 @@
+/* body{
+    width: 100%;
+    height: 100%;
+    margin-top: -0px;
+    margin-bottom: -50px;
+    background-image: url(../assets/background.jpg) !important;
+} */
+
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
+.bg {
+  /* background-image: url('https://images.unsplash.com/photo-1549834146-0702b38f1bed?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80') !important; */
+  background-image: url(../../assets/background.jpg) !important;
+  background-size: cover !important;
+  height: -webkit-fill-available;
+  width: -webkit-fill-available;
+}
+
+ .bg-1{
+   background-image: url('https://images.unsplash.com/photo-1536558094907-ef86aa0cdcda?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=732&q=80');
+    /* background-image: url('https://images.unsplash.com/photo-1549834146-0702b38f1bed?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80') !important; */
+    background-size: cover !important;
+    height: -webkit-fill-available;
+    width: -webkit-fill-available;
+
+} 
+
+.bg-2{
+  /* background-image: url(https://images.unsplash.com/photo-1509803874385-db7c23652552?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80) !important; */
+  /* background-image: url(https://images.unsplash.com/photo-1499346030926-9a72daac6c63?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80); */
+  background-image: url('https://images.unsplash.com/photo-1458724204880-8a3555bb5003?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80');
+  background-size: cover !important;
+  height: -webkit-fill-available;
+  width: -webkit-fill-available;
+
+}
+
+.navbar {
+    /* background-color: #77eee4 !important; 
+    text-color: white !important;  */
+    background-color: transparent !important; 
+    font-size: 2.8rem;
+    font-weight: 600;
+    text-shadow: 6px 6px 6px black inset;
+    color: white;
+    width: 100% !important;
+    height: 100% !important;
+
+}
+
+.nav-card-space {
+    padding-top: 5%;
+
+}
+
+.card-border{
+    border-radius: 15px;
+
+}
+
+body {
+    background:transparent;
+
+  }
+  .clear {
+    clear:both;
+
+  }
+  /* On screens that are 992px wide or less, go from four columns to two columns */
+@media screen and (min-width: 992px) {
+  
+  
+  .card-main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 20% !important;
+    margin-right: 20% !important;  
+    min-height:22.5em;
+    background: transparent !important;
+    margin:5em auto;
+    border-radius: 1.2em;
+    padding-top: 1em !important;
+    padding-left: 1em !important;
+    padding-right:1em !important;
+    flex-direction: column;
+    min-width: inherit;
+    margin-top: 10% !important;
+  }
+
+  .card{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 2% !important;
+    margin-right: 2% !important;  
+    min-height:22.5em;
+    background: transparent !important;
+    margin:5em auto;
+    border-radius: 1.2em;
+    padding-top: 3em !important;
+    padding-left: 1em !important;
+    padding-right:1em !important;
+    flex-direction: column;
+    min-width: inherit;
+    margin-top: 10% !important;
+  }
+
+  .city {
+    font-family: Roboto;
+    font-weight: 1000;
+    font-size: 2.8em;
+    color:#5b5b5b;
+
+  }
+
+  .temp {
+    text-align: right;
+    font-family:Roboto;
+    font-weight: 300;
+    font-size: 7.5vw;
+    margin-top:-1.1em;
+    color:#5b5b5b;
+    font-weight: 600;
+  }
+
+  }
+  .city {
+    font-family: Roboto;
+    font-weight: 1000;
+    font-size: 2.8em;
+    color:#5b5b5b;
+
+  }
+  .menu {
+    float: right;
+    font-family: Roboto;
+    font-size:.5vw;
+    color:#5b5b5b;
+    margin-top:-.09em;
+    margin-right:-2em;
+    list-style:square;
+    font-weight: 600;
+
+  }
+  .sun {
+    width: 9.0vw;
+    height: 10.5vw;
+    border-radius: 2.5vw;
+    margin-top: 1em;
+    margin-left: initial;
+  }
+
+  .temp {
+    text-align: right;
+    font-family:Roboto;
+    font-weight: 300;
+    font-size: 7.5vw;
+    margin-top:-1.1em;
+    color:#5b5b5b;
+    font-weight: 600;
+  }
+  .variations {
+    font-family:Roboto !important;
+    font-size: 1.5vw;
+    font-wight: 500 !important;
+    color:#525151 !important;
+    list-style:none;
+    margin-left: 1.0em;
+    font-weight: 600;
+
+
+  }
+  .mph {
+     font-size:.8vw;
+     font-weight: 600;
+
+
+  }
+  .speed {
+     margin-left: 1.1em;
+     font-weight: 600;
+
+  }
+  .forecast {
+    width: auto;
+    margin:0 auto;
+    font-weight: 600;
+
+  }
+  .day {
+    display:block;
+    width: auto;
+    height:9em;
+    float:left;
+    margin: 0 .375em .5em;
+    text-align:center;
+    font-family:Roboto;
+    color: #5b5b5b;
+    line-height: 2;
+    font-weight: 600;
+
+
+  }
+  .fri {
+    border-right:none;
+    font-weight: 600;
+
+
+  }
+  .highTemp{
+    font-weight:bold;
+    font-weight: 600;
+    color: red;
+    font-size: 2.5vw;
+    flex: 0%;
+
+  }
+  .lowTemp {
+    color: #04be58;
+    font-weight: 600 !important;
+    font-size: 2.5vw;
+
+
+  }
+  .cloudy {
+    content: url('https://i.imgur.com/0PIYfV8.png');
+
+  }
+  .sunny {
+    content: url('https://i.imgur.com/RdBr2SD.png');
+
+  }
+
+  .header{
+    font-size: 8.8vw;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+    padding-top: 10%;
+
+  }
+
+  .h1{
+    font-size: 2.8vw;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+    padding-top: 2%;
+
+  }
+
+  .header-2{
+    font-size: 6.0vw;
+    font-weight: 600;
+    color: white;
+    text-align: left;
+    /* padding-top: 10%; */
+
+  }
+
+  .humidity{
+    font-weight:bold;
+    font-weight: 600;
+    font-size: 2.5vw;
+
+  }
+
+  .pressure{
+    font-weight:bold;
+    font-weight: 600;
+    font-size: 2.2vw;
+
+  }
+
+  .col-adjust { 
+    width:20em !important;
+    min-height:22.5em;
+    align-content: center;
+    background: transparent;
+    margin:2em auto;
+    border-radius: 1.2em;
+    padding-top:1em;
+    padding-left: 1em;
+    padding-right:1em;
+
+  }
+
+  .card-header{
+    text-align: right;
+    font-family:Roboto;
+    font-weight: 300;
+    font-size: 3.5vw;
+    margin-top:-1.1em;
+    color:#5b5b5b;
+    font-weight: 600;
+  
+ }
+
+ body {
+  background:transparent;
+
+}
+.today {
+  font-size:6vw;
+  font-weight:100;
+  color:#666;
+
+}
+.night {
+  font-weight:300;
+
+}
+
+.card-title{
+  font-family: Roboto;
+    font-weight: 600;
+    font-size: 4.8vw;
+    color:#5b5b5b;
+
+}
+
+.weather-size{
+  float: left;
+  width: 9.0vw;
+  height: 7.5vw;
+  position: relative;
+
+}
+
+.card-side{
+  position: relative;
+  margin-left: 5%;
+
+}
+
+
+@media screen and (min-width: 600px) {
+  
+  .card-main {
+    /* display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 20% !important;
+    margin-right: 20% !important;  
+    min-height:22.5em;
+    background: transparent !important;
+    margin:5em auto;
+    border-radius: 1.2em;
+    padding-top: 1em !important;
+    padding-left: 1em !important;
+    padding-right:1em !important;
+    flex-direction: column;
+    min-width: inherit;
+    margin-top: 10% !important; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 18% !important;
+    margin-right: 1% !important;  
+    min-height:37.5em;
+    background: transparent !important;
+    margin:5em auto;
+    border-radius: 1.2em;
+    padding-top: 1em !important;
+    padding-left: 1em !important;
+    padding-right:1em !important;
+    flex-direction: column;
+    min-width: inherit;
+    margin-top: 1% !important;
+  }
+
+  .card{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 1% !important;
+    margin-right: 1% !important;  
+    min-height:37.5em;
+    background: transparent !important;
+    margin:5em auto;
+    border-radius: 1.2em;
+    padding-top: 1em !important;
+    padding-left: 1em !important;
+    padding-right:1em !important;
+    flex-direction: column;
+    min-width: inherit;
+    margin-top: 3% !important;
+  }
+
+  .city {
+    font-family: Roboto;
+    font-weight: 1000;
+    font-size: 3.8em;
+    color:#5b5b5b;
+
+  }
+
+  .temp-x {
+    text-align: right;
+    font-family:Roboto;
+    font-weight: 300;
+    font-size: 5.5vw;
+    margin-top:-2.1em;
+    color:#5b5b5b;
+    font-weight: 600;
+  }
+
+  .temp
+  {
+    text-align: right;
+    font-family:Roboto;
+    font-weight: 300;
+    font-size: 5.5vw;
+    margin-top:-2.1em;
+    color:#5b5b5b;
+    font-weight: 600;
+  }
+
+} 

@@ -64,13 +64,13 @@
       font-family: Roboto;
       font-weight: 600;
       font-size: 2.8em;
-      color:#5b5b5b;
+      color: white;
     }
     .menu {
       float: right;
       font-family: Roboto;
       font-size:.5vw;
-      color:#5b5b5b;
+      color:white;
       margin-top:-.09em;
       margin-right:-2em;
       list-style:square;
@@ -90,7 +90,7 @@
       font-weight: 300;
       font-size: 7.5vw;
       margin-top:-1.1em;
-      color:#5b5b5b;
+      color:white;
       font-weight: 600;
   
     }
@@ -98,7 +98,7 @@
       font-family:Roboto !important;
       font-size: 1.5vw;
       font-wight:500 !important;
-      color:#525151 !important;
+      color:white !important;
       list-style:none;
       margin-left: 1.0em;
       font-weight: 600;
@@ -127,7 +127,7 @@
       margin: 0 .375em .5em;
       text-align:center;
       font-family:Roboto;
-      color: #5b5b5b;
+      color: white;
       line-height: 2;
       font-weight: 600;
   
@@ -211,7 +211,7 @@
       font-weight: 300;
       font-size: 3.5vw;
       margin-top:-1.1em;
-      color:#5b5b5b;
+      color:white;
       font-weight: 600;  
    }
   
@@ -221,7 +221,7 @@
   .today {
     font-size:6vw;
     font-weight:100;
-    color:#666;
+    color:white;
   }
   .night {
     font-weight:300;
@@ -231,7 +231,7 @@
     font-family: Roboto;
       font-weight: 600;
       font-size: 4.8vw;
-      color:#5b5b5b;
+      color:white;
   }
   
   .weather-size{
