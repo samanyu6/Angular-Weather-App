@@ -59,10 +59,10 @@
     <br>
     <div class="forecast clear">
       <div class="day">HIGH 
-        <br> <span class="highTemp">{{Maxtemp}}&#176;</span> 
+        <br> <span class="highTemp">{{Mintemp}}&#176;</span> 
       </div>
       <div class="day ">LOW
-        <br> <span class="lowTemp">{{Mintemp}}&#176;</span>
+        <br> <span class="lowTemp">{{Maxtemp}}&#176;</span>
       </div>
       <div class="day">HUMIDTY 
         <br> <span class="humidity">{{Humidity}}%</span>
@@ -146,7 +146,7 @@
             <label class="temp">{{sgTemp}}&#176;</label>
             <span>
               <span class="variations">
-                <label>CLEAR</label>
+                <label>{{sgDesc}}</label>
                 <label><span class="speed">{{sgSpeed}}<span class="mph">mph</span></span></label>
               </span>
             </span>
