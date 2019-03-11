@@ -20,30 +20,24 @@
 
 <router-outlet></router-outlet> -->
 <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script> -->
-
+<head>
 <link href='https://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+</head>
+
 <html>
 <article class="bg">
     <nav class="navbar navbar-light bg-light navbar" >
       <label>Weather App</label>
       <form class="form-inline" #cityForm="ngForm" novalidate ngSubmit="onSubmit()">  
-          <input 
-        type="text"
-        name = cityName ngModel
-        class="form-control mr-sm-2"
-        google-place
-        (onSelect)="setAddress($event)"
-        placeholder="Type to search..">
-        <!-- Displaying the contents of the address object received from our event emitter -->
-        <ul style="list-style-type: none;">
-          <li *ngFor="let key of addrKeys">
-            <span style="font-weight: bold">{{key}}</span>: <span>{{addr[key]}}</span>
-          </li>
-        </ul>         
-        <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Search</button>
-      </form> 
-      
+      <input 
+          google-place
+          type="text"
+          class="form-control mr-sm-2"
+          (onSelect)="setAddress($event)"
+          placeholder="Type to search..">
 
+      <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Search</button>
+      </form>
     </nav>
 
     <div class="nav-card-space"></div>
