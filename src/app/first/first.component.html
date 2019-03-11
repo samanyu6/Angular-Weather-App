@@ -26,14 +26,24 @@
 <article class="bg">
     <nav class="navbar navbar-light bg-light navbar" >
       <label>Weather App</label>
-      <!-- <form class="form-inline" #cityForm="ngForm" novalidate ngSubmit="onSubmit()">  
-        <input class="form-control mr-sm-2" type="search" aria-label="Search" placeholder="Enter city" name = cityName ngModel>
+      <form class="form-inline" #cityForm="ngForm" novalidate ngSubmit="onSubmit()">  
+          <input 
+        type="text"
+        name = cityName ngModel
+        class="form-control mr-sm-2"
+        google-place
+        (onSelect)="setAddress($event)"
+        placeholder="Type to search..">
+        <!-- Displaying the contents of the address object received from our event emitter -->
+        <ul style="list-style-type: none;">
+          <li *ngFor="let key of addrKeys">
+            <span style="font-weight: bold">{{key}}</span>: <span>{{addr[key]}}</span>
+          </li>
+        </ul>         
         <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Search</button>
-      </form> -->
-      <form class="form-inline" #cityForm="ngForm" (ngSubmit)="onSubmit(cityForm.value)">
-        <input class="form-control mr-sm-2" type="search" placeholder="Enter city" aria-label="Search" name="cityName" ngModel>
-        <button class="btn btn-outline-warning my-2 my-sm-0" type="submit" id="button">Search</button>
-      </form>
+      </form> 
+      
+
     </nav>
 
     <div class="nav-card-space"></div>

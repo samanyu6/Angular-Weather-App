@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { SecondComponent } from './second/second.component';
 import { HttpClientModule} from '@angular/common/http';
 import { FirstComponent } from './first/first.component';
+import { GooglePlacesDirective } from './google-places.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     SecondComponent,
     FirstComponent,
+    GooglePlacesDirective,
   ],
   imports: [
     BrowserModule,
