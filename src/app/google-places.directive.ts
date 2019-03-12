@@ -45,17 +45,22 @@ export class GooglePlacesDirective implements OnInit {
         location_obj["postal_code"] = item["short_name"];
       }
     }
+    return location_obj;
   }
 
   ngOnInit() {
     // const autocomplete = new google.maps.places.Autocomplete(this.element);
-
-    const autocomplete = new google.maps.places.Autocomplete(this.element);
+    var options = {
+      types: ["(cities)"]
+    };
+    const autocomplete = new google.maps.places.Autocomplete(
+      this.element,
+      options
+    );
     //Event listener to monitor place changes in the input
     google.maps.event.addListener(autocomplete, "place_changed", () => {
       //Emit the new address object for the updated place
       // this.onSelect.emit(this.getFormattedAddress(autocomplete.getPlace()));
-
       const searched = autocomplete.getPlace();
       // var location = {};
       // var lat = searched.geometry.location.lat();
@@ -63,8 +68,10 @@ export class GooglePlacesDirective implements OnInit {
 
       // var locObj: String;
       // locObj = lat.concat(lng);
-      this.zone.run(() => {});
-      this.onSelect.emit(searched);
+
+      this.zone.run(() => {
+        this.onSelect.emit(searched);
+      });
     });
   }
 }

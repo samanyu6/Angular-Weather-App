@@ -256,11 +256,10 @@ export class FirstComponent implements OnInit {
     //to the object in the DOM.
     var location: {};
     var obj: any;
-    this.zone.run(() => {
-      obj = loc;
-    });
-    console.log(obj);
-    if (loc != null) this.router.navigate(["/city", loc]);
+    this.zone.run(() => {});
+    var place = String(loc.name).split(",");
+    console.log(place[1]);
+    if (loc != null) this.router.navigate(["/city/", String(place[1])]);
     else this.router.navigate["/"];
   }
 }
