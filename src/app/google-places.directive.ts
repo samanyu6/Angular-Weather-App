@@ -4,7 +4,8 @@ import {
   ElementRef,
   OnInit,
   Output,
-  EventEmitter
+  EventEmitter,
+  NgZone
 } from "@angular/core";
 
 declare var google: any;
@@ -16,7 +17,7 @@ export class GooglePlacesDirective implements OnInit {
   @Output() onSelect: EventEmitter<any> = new EventEmitter();
   private element: HTMLInputElement;
 
-  constructor(elRef: ElementRef) {
+  constructor(elRef: ElementRef, private zone: NgZone) {
     //elRef will get a reference to the element where
     //the directive is placed
     this.element = elRef.nativeElement;
@@ -44,15 +45,26 @@ export class GooglePlacesDirective implements OnInit {
         location_obj["postal_code"] = item["short_name"];
       }
     }
-    return location_obj;
   }
 
   ngOnInit() {
+    // const autocomplete = new google.maps.places.Autocomplete(this.element);
+
     const autocomplete = new google.maps.places.Autocomplete(this.element);
     //Event listener to monitor place changes in the input
     google.maps.event.addListener(autocomplete, "place_changed", () => {
       //Emit the new address object for the updated place
-      this.onSelect.emit(this.getFormattedAddress(autocomplete.getPlace()));
+      // this.onSelect.emit(this.getFormattedAddress(autocomplete.getPlace()));
+
+      const searched = autocomplete.getPlace();
+      // var location = {};
+      // var lat = searched.geometry.location.lat();
+      // var lng = searched.geometry.location.lng();
+
+      // var locObj: String;
+      // locObj = lat.concat(lng);
+      this.zone.run(() => {});
+      this.onSelect.emit(searched);
     });
   }
 }

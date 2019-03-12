@@ -71,8 +71,6 @@ export class FirstComponent implements OnInit {
   onSubmit(data) {
     console.log(data.cityName);
     // this.router.navigateByUrl('/city');
-    if (data.cityName != null) this.router.navigate(["/city", data.cityName]);
-    else this.router.navigate["/"];
   }
 
   //On opening or initialization of webpage, asks for user location to display weather conditions
@@ -253,15 +251,16 @@ export class FirstComponent implements OnInit {
     }
   }
 
-  setAddress(addrObj) {
+  setAddress(loc) {
     //We are wrapping this in a zone method to reflect the changes
     //to the object in the DOM.
-    // this.zone.run(() => {
-    //   this.addr = addrObj;
-    //   this.addrKeys = Object.keys(addrObj);
-    //   console.log(addrObj);
-    // });
-
-    console.log(addrObj);
+    var location: {};
+    var obj: any;
+    this.zone.run(() => {
+      obj = loc;
+    });
+    console.log(obj);
+    if (loc != null) this.router.navigate(["/city", loc]);
+    else this.router.navigate["/"];
   }
 }
