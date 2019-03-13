@@ -257,7 +257,26 @@ export class FirstComponent implements OnInit {
     var obj: any;
     this.zone.run(() => {});
     var place = String(loc.name).split(",");
+    place[0] = this.accentFold(place[0]);
     if (loc != null) this.router.navigate(["/city/", String(place[0])]);
     else this.router.navigate["/"];
+  }
+
+  accentFold(inStr) {
+    return inStr.replace(
+      /([àáâãäå])|([ç])|([èéêë])|([ìíîï])|([ñ])|([òóôõöø])|([ß])|([ùúûü])|([ÿ])|([æ])/g,
+      function(str, a, c, e, i, n, o, s, u, y, ae) {
+        if (a) return "a";
+        if (c) return "c";
+        if (e) return "e";
+        if (i) return "i";
+        if (n) return "n";
+        if (o) return "o";
+        if (s) return "s";
+        if (u) return "u";
+        if (y) return "y";
+        if (ae) return "ae";
+      }
+    );
   }
 }
