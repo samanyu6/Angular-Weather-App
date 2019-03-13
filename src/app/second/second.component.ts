@@ -36,18 +36,22 @@ export class SecondComponent implements OnInit {
 
   //On opening or initialization of webpage, asks for user location to display weather conditions
   ngOnInit() {
-    this.getCityWeather();
     this.cityName = String(this.route.snapshot.paramMap.get("cty"));
+    this.getCityWeather(this.cityName);
     console.log(this.cityName);
   }
 
   //Obtain weather details in JSON format
-  getCityWeather() {
+  getCityWeather(city: String) {
     let api_url =
       "https://api.openweathermap.org/data/2.5/weather?q=" +
-      this.cityName +
-      "&appid=40d8aa34748abbf7f5f10df4edb61b63";
-    // let api_url = `https://api.openweathermap.org/data/2.5/weather?appid=40d8aa34748abbf7f5f10df4edb61b63&q={{this.cityName}}`;
+      city +
+      "&appid=110ff02ed24ccd819801248373c3b208";
+
+    // "https://api.openweathermap.org/data/2.5/forecast?id=" +
+    // city +
+    // "&units=metric&appid=110ff02ed24ccd819801248373c3b208";
+    console.log(api_url);
     this.httpClient.get(api_url).subscribe(data => {
       this.weatherJson = data;
       console.log(this.weatherJson);

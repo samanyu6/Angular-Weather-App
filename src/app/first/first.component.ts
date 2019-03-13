@@ -68,10 +68,10 @@ export class FirstComponent implements OnInit {
   ) {}
 
   //Getting city name as input from html
-  onSubmit(data) {
-    console.log(data.cityName);
-    // this.router.navigateByUrl('/city');
-  }
+  // onSubmit(data) {
+  //   console.log(data.cityName);
+  //   // this.router.navigateByUrl('/city');
+  // }
 
   //On opening or initialization of webpage, asks for user location to display weather conditions
   ngOnInit() {
@@ -100,7 +100,6 @@ export class FirstComponent implements OnInit {
     }&lon=${pos.coords.longitude}`;
     this.httpClient.get(api_url).subscribe(data => {
       this.weatherJson = data;
-      console.log(this.weatherJson);
 
       //Define values from JSON to respective datatype to pass to angular page
       this.Place = this.weatherJson.name;
@@ -258,8 +257,7 @@ export class FirstComponent implements OnInit {
     var obj: any;
     this.zone.run(() => {});
     var place = String(loc.name).split(",");
-    console.log(place[1]);
-    if (loc != null) this.router.navigate(["/city/", String(place[1])]);
+    if (loc != null) this.router.navigate(["/city/", String(place[0])]);
     else this.router.navigate["/"];
   }
 }
