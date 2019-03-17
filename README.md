@@ -4,9 +4,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 # Features
 <li>
-  <ul> Shows current weather based on geolocation.</ul>
-  <ul> Typeahead functionality where users can search for their favourite cities and get weather data for the same.</ul>
-  <ul> Shows weather data for the three most popular cities </ul>
+  <ul> Shows current weather based on geolocation.
+  <ul> Typeahead functionality where users can search for their favourite cities and get weather data for the same.
+  <ul> Shows weather data for the three most popular cities.
 </li>
 
 ## Development server
