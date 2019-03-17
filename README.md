@@ -2,6 +2,13 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.2.
 
+# Features
+<li>
+  <ul> Shows current weather based on geolocation.</ul>
+  <ul> Typeahead functionality where users can search for their favourite cities and get weather data for the same.</ul>
+  <ul> Shows weather data for the three most popular cities </ul>
+</li>
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
